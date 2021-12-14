@@ -2,7 +2,7 @@ const {By} = require('selenium-webdriver')
 
 module.exports = {
     crossOffMovie: async (driver) => {
-        const movie = "Free Guy"
+        const movie = "Spiderman"
         await driver.findElement(By.xpath('//input')).sendKeys(movie)
         await driver.findElement(By.xpath('//button')).click()
         await driver.findElement(By.xpath('//span')).click()
@@ -12,7 +12,7 @@ module.exports = {
     }, 
 
     uncrossMovie: async (driver) => {
-        const movie = "Free Guy"
+        const movie = "Spiderman"
         await driver.findElement(By.xpath('//input')).sendKeys(movie)
         await driver.findElement(By.xpath('//button')).click()
         await driver.findElement(By.xpath('//span')).click()
@@ -24,11 +24,11 @@ module.exports = {
     }, 
 
     deleteMovie: async (driver) => {
-        const movie = "Free Guy"
+        const movie = "Spiderman"
         await driver.findElement(By.xpath('//input')).sendKeys(movie)
         await driver.findElement(By.xpath('//button')).click()
         await driver.findElement(By.xpath('//span'))
-        const deleted = await driver.findElement(By.id('FreeGuy')).click()
+        const deleted = await driver.findElement(By.id('Spiderman')).click()
 
         expect(deleted).toBeFalsy()
     }
